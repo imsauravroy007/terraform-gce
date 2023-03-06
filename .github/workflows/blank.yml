@@ -37,9 +37,9 @@ jobs:
           token:my-project/docker-registry-token
 
     # Example of using the output
-    - id: 'publish'
-      uses: 'terraform-gce@main'
-      env:
-        TOKEN: '${{ steps.secrets.outputs.token }}'
+    #- id: 'publish'
+    #  uses: 'terraform-gce@main'
+    #  env:
+    #   TOKEN: '${{ steps.secrets.outputs.token }}'
 
   
