@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-echo "*****    Installing Nginx    *****"
+echo "*****    Installing Tomcat    *****"
 apt update -y 
 apt install tomcat9 tomcat9-admin -y
 systemctl enable tomcat9
