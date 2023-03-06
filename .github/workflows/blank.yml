@@ -38,7 +38,7 @@ jobs:
 
     # Example of using the output
     - id: 'publish'
-      uses: 'foo/bar@main'
+      uses: 'terraform-gce@main'
       env:
         TOKEN: '${{ steps.secrets.outputs.token }}'
 
