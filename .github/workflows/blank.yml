@@ -32,7 +32,7 @@ jobs:
           token:my-project/docker-registry-token
 
     # Example of using the output
-    - id: 'publish'
-      uses: 'foo/bar@main'
-      env:
-        TOKEN: '${{ steps.secrets.outputs.token }}'
+    #- id: 'publish'
+    #  uses: 'foo/bar@main'
+    #  env:
+    #    TOKEN: '${{ steps.secrets.outputs.token }}'
