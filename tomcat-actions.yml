@@ -1,0 +1,30 @@
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+push:
+  branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  job_id:
+    permissions:
+      contents: 'read'
+      id-token: 'write'
+
+    steps:
+    - id: 'auth'
+      uses: 'google-github-actions/auth@v1'
+      with:
+        workload_identity_provider: 'projects/536962519823/locations/global/workloadIdentityPools/my-pool/*'
+        service_account: 'githubactions@winged-fiber-344807.iam.gserviceaccount.com'
+
+    - id: 'secrets'
+      uses: 'google-github-actions/get-secretmanager-secrets@v1'
+      with:
+        secrets: |-
+          token:my-project/docker-registry-token
+
+    # Example of using the output
+    - id: 'publish'
+      uses: 'foo/bar@main'
+      env:
+        TOKEN: '${{ steps.secrets.outputs.token }}'
