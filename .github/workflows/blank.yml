@@ -22,7 +22,7 @@ jobs:
     - id: 'auth'
       uses: 'google-github-actions/auth@v1'
       with:
-        workload_identity_provider: 'projects/123456789/locations/global/workloadIdentityPools/my-pool/providers/my-provider'
+        workload_identity_provider: 'projects/536962519823/locations/global/workloadIdentityPools/my-pool/'
         service_account: 'githubactions@winged-fiber-344807.iam.gserviceaccount.com'
 
     - id: 'secrets'
