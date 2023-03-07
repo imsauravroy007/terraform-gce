@@ -24,7 +24,6 @@ resource "google_compute_instance" "default" {
     }
   }
 
-  # Install Flask
   metadata_startup_script = file("${path.module}/warmup.sh")
 
   network_interface {
