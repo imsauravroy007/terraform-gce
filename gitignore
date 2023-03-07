@@ -4,6 +4,7 @@
 # .tfstate files
 *.terraform.Lock.hcl
 *.tfstate
+*.terraform
 *.tfstate.*
 *.txt
 # Crash log files

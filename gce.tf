@@ -24,7 +24,7 @@ resource "google_compute_instance" "default" {
     }
   }
 
-  metadata_startup_script = file("${path.module}/warmup.sh")
+  metadata_startup_script = file("${path.module}/startup.sh")
 
   network_interface {
     subnetwork = google_compute_subnetwork.default.id
