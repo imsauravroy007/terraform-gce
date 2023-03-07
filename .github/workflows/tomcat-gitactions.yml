@@ -2,6 +2,7 @@ on:
   push:
     branches:
       - main
+      
 env:
   SECRET_NAME: mytestsecret2
 
