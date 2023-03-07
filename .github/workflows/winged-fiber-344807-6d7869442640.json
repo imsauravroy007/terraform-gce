@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "winged-fiber-344807",
+  "private_key_id": "6d7869442640892ac69b0ae2a35b05164c177822",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDi8bkELIQdVC+C\nH8ES4+3tknbKwype/54/WPLgPApIhuObW6Ce4TZlAwzC3GI7XbjSkCJ2H6Dnv7aP\nGECp4/0BTW+MqiR1eLAPJLDsY4uSgWiWL7hj1K+awa0E/zgI54dTAxp7HnxHdgmE\nthUMfFonGU7Zbotzfcx3txPVDf+RIxqbf7Dvdept9sMm/hGtTVD/6Z0heA1JceYE\ngDj4tRkogttfWc2nu3N7rhpxIq+LEWzU3jpaY+Q6/mCsv3rXqX943UE4TYh9u3N6\nLxnUWWIFA68WaUAOtSkSExNIVsa/u/FgvK8AyYT4Uf87q/9QIr7ZM18+s0jpnEEi\nRGpO1tQhAgMBAAECggEAAjzCbePOD6Eo8L4rmWotPWmmvMJmZ6Mnsu8t22XfVUfp\njlQKbHApXAVgk4eeexny78+wKOL2vQiOUUqhBJIoIeJ0cy1DbvPYJH+tNAwzllre\nDMqYPxLozxYR6xn+OiELzzBmJLv8598Mu/kbK9E9oEoNe9l6C9+765trjIh25XFJ\nS9+0PMXWjWpZ/9FiiDuYzdtz4Ky80Cz0ik0mhx5OPXEBDHTU0803QTD5KeLrLOk0\nF7rLtrL34Fmw9oo0K37tAggSOjLtJxwhCUR+EdoKo86++TEQTXhN1QBa0Hm3kXPm\nhnIFOO8EmvmedT3mblC50wlqat1k7X6CsOHs2oyXWQKBgQD8IROpDUDKouXDLfPD\ny9k3zWCKfy9s2QllNth5wwwBCsFvUBS108VuZz2wgFke9cSthDCgyJl8jpmj7Ht1\n2qCzXhdCf3q5rybglvgUog/goGo4vQw9mn3b8rvwlHDAMAIOFUu0yJgqD//79ank\nsv49CBQQzZX1JrMGNVHoVjSuPQKBgQDmbanWU0KBrciu6ua+Ph5hcnaic8LTqmNi\ntSH4ZaFD9aPoSpesKTYRH0jZVcCLxvR3oAvYIp4TyRfJD66ZiGNLEk1wxFUQza0f\nEqGrPHcxfq0zplW4qfD4hsywVzWcEYqWaL5piXE1+3LEcq3grgnxw8sWYkqKDG9b\nk8BAkJtftQKBgGddWCYSXOG2buPZzvoSdHdAJ7gf9F13jTaFibJBmIZE1pDAD/2L\nWIGuqcfWlrLupzdL3nPMScCa5boilWr3urJOfNKyWKoPeKzSt9odpsy8d0/TkVUg\nJUEq/onfEWp5RB5p9KOlKVz1Okkdqg0spLZ4vWE2J6hduT9uVKofzXExAoGAYa2Y\n8g6HQbtuN5/BwmFItZw05/ZUXy96Q8xuowJJ0yocmgqMsuEhVy7AzchI/7eNx+vj\nOXKrOc3jtEpehBzJongWtbe0K5RUT7ixKYpPKH7/YsaezdHUITXbLOE7C3ZwHgQ2\nuzwU7oIxi07loDmGY6LQwyNVX6GXzuUZ+QSTqIUCgYAhz0v4Vdi+khRdHtIdRBUr\nl6Kb2duIeklz5iHaGnrNr/PsraPpXVKZPw5T4nw86LzWvhk8wjaIIv4oWlAmdCdi\nj1fOQgcj5+UB6BGi5rMNpNc5eQR0bClw+FTV93QcApS7eRRBtZT5pU5Eq2xa6pJ8\nxYSCHa65h3uQRyoKaXeuRg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "githubactions@winged-fiber-344807.iam.gserviceaccount.com",
+  "client_id": "105373878646449596530",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/githubactions%40winged-fiber-344807.iam.gserviceaccount.com"
+}

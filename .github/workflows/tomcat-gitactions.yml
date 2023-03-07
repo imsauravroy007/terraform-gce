@@ -1,45 +1,38 @@
-# This is a basic workflow to help you get started with Actions
-
-name: CI
-
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    branches:
+      - main
+      
+env:
+  SECRET_NAME: mytestsecret2
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  read_secret:
     runs-on: ubuntu-latest
-    permissions:
-      contents: 'read'
-      id-token: 'write'
 
     steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
     - id: 'auth'
       uses: 'google-github-actions/auth@v1'
       with:
-        workload_identity_provider: 'projects/536962519823/locations/global/workloadIdentityPools/my-pool/*'
-        service_account: 'githubactions@winged-fiber-344807.iam.gserviceaccount.com'
+        credentials_json: '${{ secrets.GCP_TOKEN }}'
 
-    - id: 'secrets'
-      uses: 'google-github-actions/get-secretmanager-secrets@v1'
-      with:
-        secrets: |-
-          token: projects/536962519823/secrets/test/1
+    - name: 'Set up Cloud SDK'
+      uses: 'google-github-actions/setup-gcloud@v1'
 
-    # Example of using the output
-    #- id: 'publish'
-    #  uses: 'terraform-gce@main'
-    #  env:
-    #   TOKEN: '${{ steps.secrets.outputs.token }}'
+    - name: Add GCloud Beta
+      run: |
+        yes | gcloud components install beta
 
-  
+    - name: Read secret from GCP Secret Manager
+      run: |
+        secret=$(gcloud beta secrets versions access latest --secret=$SECRET_NAME)
+        echo "::set-env name=SECRET_VAR::$secret"
+      env:
+        ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
+
+    - name: Use secret
+      run: |
+        echo "Secret value is: $SECRET_VAR"
