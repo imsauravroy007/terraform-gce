@@ -7,7 +7,7 @@ env:
   SECRET_NAME: mytestsecret2
   PROJECT_ID: ${{ secrets.GCE_PROJECT_ID }}
   GCE_INSTANCE: ${{ secrets.GCE_INSTANCE }}
-  GCE_INSTANC_ZONE: ${{ secrets.GCE_INSTANCE_ZONE }}
+  GCE_INSTANCE_ZONE: ${{ secrets.GCE_INSTANCE_ZONE }}
   
 jobs:
   read_secret:
@@ -39,9 +39,12 @@ jobs:
     - name: Use secret
       run: |
           echo "Secret value is: $SECRET_VAR"
+          echo $PROJECT_ID
+          echo $GCE_INSTANCE
+         
       
     - name: Call a Bash Script
       run: |- 
         gcloud compute instances add-metadata $GCE_INSTANCE \
           --zone "$GCE_INSTANCE_ZONE" \
-          --metadata=starup-script="${GITHUB_WORKSPACE}/startup.script"
+          --metadata=starup-script=${GITHUB_WORKSPACE}/startup.script
