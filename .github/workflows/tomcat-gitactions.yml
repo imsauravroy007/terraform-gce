@@ -2,8 +2,7 @@ on:
   push:
     branches:
       - main
-      
-      
+            
 env:
   SECRET_NAME: mytestsecret2
 
@@ -36,5 +35,5 @@ jobs:
 
     - name: Use secret
       run: |
-        decodeString: ${{ secrets.SECRET_VAR }}
+       
         echo "Secret value is: $SECRET_VAR"
