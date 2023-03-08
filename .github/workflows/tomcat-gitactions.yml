@@ -44,6 +44,4 @@ jobs:
       
     - name: Call a Bash Script
       run: |- 
-        gcloud compute instances add-metadata $GCE_INSTANCE \
-          --zone "$GCE_INSTANCE_ZONE" \
-          --metadata=starup-script=${GITHUB_WORKSPACE}/startup.sh
+          gcloud compute ssh saurav12epam@tomcat-server -- bash -s < testscript.sh
