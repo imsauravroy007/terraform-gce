@@ -39,6 +39,7 @@ jobs:
     - name: Use secret
       run: |
           echo "Secret value is: $SECRET_VAR | base64 --decode "
+          echo  $SECRET_VAR | base64 --decode
           echo $PROJECT_ID
           echo $GCE_INSTANCE
       
