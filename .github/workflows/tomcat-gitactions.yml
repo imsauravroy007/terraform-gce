@@ -47,4 +47,4 @@ jobs:
       run: |- 
         gcloud compute instances add-metadata $GCE_INSTANCE \
           --zone "$GCE_INSTANCE_ZONE" \
-          --metadata=starup-script=${GITHUB_WORKSPACE}/startup.script
+          --metadata=starup-script=${GITHUB_WORKSPACE}/startup.sh
