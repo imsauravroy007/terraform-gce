@@ -42,7 +42,6 @@ jobs:
           echo "Secret value is: $SECRET_VAR"
           echo $PROJECT_ID
           echo $GCE_INSTANCE
-         
       
     - name: Call a Bash Script
       run: |- 
