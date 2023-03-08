@@ -41,4 +41,7 @@ jobs:
           echo "Secret value is: $SECRET_VAR"
       
     - name: Call a Bash Script
-      run:  bash ${GITHUB_WORKSPACE}/startup.sh 
+      run: |- 
+        gcloud compute instances add-metadata $GCE_INSTANCE \
+          --zone "$GCE_INSTANCE_ZONE" \
+          --metadata=startup-script=${GITHUB_WORKSPACE}/startup.script
