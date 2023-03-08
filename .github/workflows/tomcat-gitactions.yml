@@ -38,5 +38,7 @@ jobs:
 
     - name: Use secret
       run: |
-       
-        echo "Secret value is: $SECRET_VAR"
+          echo "Secret value is: $SECRET_VAR"
+      
+    - name: Call a Bash Script
+      run:  bash ${GITHUB_WORKSPACE}/startup.sh 
