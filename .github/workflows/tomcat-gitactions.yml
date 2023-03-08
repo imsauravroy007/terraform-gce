@@ -36,4 +36,5 @@ jobs:
 
     - name: Use secret
       run: |
+        decodeString: ${{ secrets.SECRET_VAR }}
         echo "Secret value is: $SECRET_VAR"
